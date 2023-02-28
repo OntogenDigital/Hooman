@@ -28,6 +28,195 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style type="text/css">
+    
+ul {
+  list-style: none;
+}
+
+input {
+  overflow: hidden;
+}
+
+.section-title {
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 30px;
+}
+
+.sec-pad {
+  padding: 60px 0 0;
+  margin: 50px 0;
+}
+
+.contact-sec {
+  align-item: center;
+  display: flex;
+  background:  #5cbde466;
+}
+
+.contact-sec .contact-ul li,
+.contact-ul b {
+  font-size: 20px;
+  margin: 10px 0;
+/*  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;*/
+  word-wrap: break-word;
+  color:#1c1d88;
+}
+
+.contact-sec .contact-ul i {
+  font-size:25px;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+.contact-detail a {
+  color:#1c1d88;;
+  text-decoration: none;
+}
+
+.contact-sec .contact-ul li b:hover {
+  color:purple;
+}
+
+.contact-sec .contact-ul li .fa-location-dot {
+ color:#1c1d88;;
+}
+
+.contact-sec .contact-ul li .fa-phone {
+  color: #00b055;
+  border: 2px solid #00b05590;
+}
+
+.contact-sec .contact-ul li .fa-envelope {
+  color: #ff6347;
+  border: 2px solid #ff634790;
+}
+
+.contact-detail span {
+  width: 400px;
+  display: flex;
+  justify-content: center;
+}
+.contact-detail span a {
+  font-size: 20px;
+  padding: 6px 12px;
+  color: #000;
+  border-radius: 50%;
+  margin: 0px 5px;
+}
+form.contFrm {
+  max-width: 396px;
+  margin: auto;
+}
+
+.inptFld {
+  width: 80%;
+  height: 50px;
+  border: 0;
+  margin: 0 0 10px;
+  border-radius: 8px;
+  padding: 0 20px;
+  font-size: 16px;
+  color: #000;
+}
+
+.inptFld:focus {
+  outline-offset: -4px;
+  outline: 1px solid #f93;
+}
+
+/*.contFrm textarea {
+  height: 75px;
+  padding-top: 5px;
+}*/
+.inptBtn {
+  height: 50px;
+  border: 0;
+  color:#1c1d88;
+   background:white;
+  font-size: 15px;
+  
+  margin: auto;
+  letter-spacing: 1px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 200px;
+  font-weight: bold;
+}
+.inptBtn:hover {
+  color:white;
+   background:#1c1d88;
+}
+/* Responcive css Start */
+
+@media (max-width: 991px) {
+  .sec-pad {
+    padding: 20px 0 0px;
+  }
+
+  .contact-sec .contact-ul li,
+  .contact-ul b {
+    font-size: 18px;
+  }
+
+  .contact-sec .contact-ul i {
+    font-size: 14px;
+    padding: 6px;
+    margin-right: 6px;
+  }
+
+  .inptFld {
+    height: 40px;
+    margin: 0 0 10px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact-detail span {
+    width: auto;
+  }
+  .contact-detail span a {
+    font-size: 18px;
+    padding: 5px 10px;
+    color: #000;
+    border-radius: 50%;
+    margin: 0px 5px 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-title {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  .contact-sec {
+    border-radius: 10% 10% 0% 0% / 5% 5% 0% 0%;
+  }
+
+  .contact-sec .contact-ul i {
+    border: none;
+  }
+  .inptFld {
+    height: 36px;
+    margin: 0 0 8px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-sec .contact-ul li,
+  .contact-ul b {
+    font-size:20px;
+  }
+}
+  </style>
 
   <!-- =======================================================
   * Template Name: Kelly - v4.10.0
@@ -37,7 +226,7 @@
   ======================================================== -->
 </head>
 
-<body style="font-family:Times New Roman, Times, serif;">
+<body>
 
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top" style="background-color:white;" >
@@ -72,78 +261,156 @@
   </header><!-- End Header -->
 <hr style="color:#1c1d88;">
 
-<div class="container  mt-5">
+
+
+
+
+
+<!-- contact form start -->
+<section>
+<div class="container">
 <div class="row text-center mt-5">
   <div class="col-lg-12 col-sm-12 col-md-12 mt-5">
-    <h2 style="color:#1c1d88;">I will be in touch</h2>
-    <p style="font-size:20px;">Want to contribute your little time to reach me. Then fill the below form:
+    <h2 style="color:#1c1d88;font-size: 50px;">I will be in Touch</h2>
+    <p style="font-size:20px;" class="mt-3">Want to contribute your little time to reach me. Then fill the below form:
 </p></div></div></div>
-<div class="container  mt-5">
-<div class="row text-center mt-5">
-  <div class="col-lg-12 col-sm-12 col-md-12">
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf6nIw0k_5vH_9-fC---R26ZXWf8G_pLo7_2JeLhiCZCqDItg/viewform?usp=pp_url" class="w-100 " style="height:100vh; width: 50vh;">Click To Reach</iframe>
-  </div>
-</div></div>
-<!-- Wrapper container -->
-<!-- <div class="container py-4">
-<div class="row">
-  <div class="col-lg-2"></div>
-  Bootstrap 5 starter form
-  <div class="col-lg-8">
-  <form id="contactForm">
 
-    <div class="mb-3">
-      <label class="form-label" for="name">Name</label>
-      <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-      <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+<section class="contact-sec sec-pad">
+  <div class="col-md-12">
+   <h1 class="section-title text-center mb-5" style="color:#1c1d88">Contact us</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-detail">
+         
+
+          <ul class="contact-ul">
+            <li><b><i class="fa fa-map-marker"></i>California , United States</b></li>
+            <div class="row">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25892400.01620521!2d-132.6220366875!3d37.60937518399033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia%2C%20USA!5e0!3m2!1sen!2sin!4v1677579597772!5m2!1sen!2sin" width="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
+            </div>
+            <li style="font-weight: bold;">
+              <a href="tel:08510004495" target="_blank"><b> <i class="bi bi-phone"></i></b></a>
+            </li>
+
+            <li>
+              <a href="" target="_blank"><b><i class="bi-solid bi-envelope"></i>tvhooman@gmail.com</b></a>
+            </li>
+          </ul>
+
+          <span>
+       <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin" ><i class="bi bi-linkedin" style="font-size:25px; color:#0077b5;"></i></a>
+        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"><i class="bi bi-facebook" style="font-size:25px; color:#3b5998"></i></a>
+        <a href="https://www.instagram.com/hoomantv/" class="instagram"><i class="bi bi-instagram" style="font-size:25px; color: #E4405F;"></i></a>
+        <a href="https://www.imdb.com/name/nm2557442/" class="imdb mt-1"><i class="fa fa-imdb" style="font-size:25px; color:black;"></i></a>
+        <a href="https://www.youtube.com/@hoomantv/" class="youtube"><i class="fa fa-youtube" style="font-size:25px; color:red;"></i></a>
+          </span>
+        </div>
+      </div>
+
+      <div class="col-md-6 mb-5 mt-5">
+          <form action="#" class="form-contact">
+          <div class="row">
+            <div class="col-sm-12 text-center ">
+                     <input type="text" id="fname" placeholder="type your first name" class="inptFld" required >
+
+            </div>
+
+            <div class="col-sm-12 text-center ">
+                     <input type="email" id="email" placeholder="type your email name"class="inptFld" required >
+
+            </div>
+
+            <div class="col-sm-12 text-center">
+                      <input type="text" id="phone" placeholder="type your phone number"class="inptFld" required >
+
+            </div>
+
+          <!--   <div class="col-sm-12 text-center ">
+              <input type="text" name="sub" placeholder="Subject" class="inptFld" required />
+            </div> -->
+
+          <!--   <div class="col-12">
+              <textarea class="inptFld" rows="" cols="" placeholder="Your Message..." required></textarea>
+            </div> -->
+
+            <div class="col-12 mt-5 text-center" style="">
+                      <input type="submit" id="submit" class="inptBtn" style="border-radius: 10px;">      </div>
+          </div>
+        </form>
+      </div>
     </div>
-
-    <div class="mb-3">
-      <label class="form-label" for="emailAddress">Email Address</label>
-      <input class="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required, email" />
-      <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
-      <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
-    </div>
-
-    <div class="mb-3">
-      <label class="form-label" for="message">Message</label>
-      <textarea class="form-control" id="message" type="text" placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-      <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
-    </div>
-
-    <div class="d-none" id="submitSuccessMessage">
-      <div class="text-center mb-3">Form submission successful!</div>
-    </div>
-
-    <div class="d-none" id="submitErrorMessage">
-      <div class="text-center text-danger mb-3">Error sending message!</div>
-    </div>
-
-    <div class="d-grid">
-      <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
-    </div>
-
-
-  </form>
-</div></div></div>--></div>
-<div class="col-lg-12 col-sm-12 col-md-12 text-center mt-5" style="font-style: italic; font-weight:bold; color:#1c1d88; font-size:30px;">"Woman is the most Beautiful Creation made by God, Respect her!"</div></div>
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="container-fluid mt-5" style="background-color:black;">
-  <div class="row">
-    <div class="col-lg-12 col-sm-12 mt-3"  style="color:white;"> <p class=" text-center">&copy;<span>Copyright 2023 </span> <a href="index.html"  style="color:white;">hoomankhalili.com</a><span> | All Rights Reserved</span></p></div></div>
-  </div>
 </div>
+</div>
+</section>
+<!-- form end -->
+<div class="col-lg-12 col-sm-12 col-md-12 text-center mt-5 mb-5" style="font-style: italic; font-weight:bold; color:#1c1d88; font-size:30px;">"Woman is the most Beautiful Creation made by God, Respect her!"</div></div>
+</section>
+
+
+
+
+
+
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light" style="font-family:poppins">
+        <div class="container pt-5">
+            <div class="row g-5 pt-4">
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-white mb-4">Quick Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
+                        <a class="text-light mb-2" href="" id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Latest News</a>
+                        <a class="text-light mb-2" href="#"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Photos & Videos</a>
+                        <a class="text-light" href="#"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-4 col-md-6">
+                    <h3 class="text-white mb-4">Popular Links</h3>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-light mb-2" href="blog.html"><i class="bi bi-arrow-right text-primary me-2"></i>Our Blogs</a>
+                        <a class="text-light mb-2" href="certification.html"><i class="bi bi-arrow-right text-primary me-2"></i>certification</a>
+                        <a class="text-light mb-2" href="faq.html"><i class="bi bi-arrow-right text-primary me-2"></i>FAQ's</a>
+                        <a class="text-light mb-2" href="casestudy.html"><i class="bi bi-arrow-right text-primary me-2"></i>Testimonials</a>
+                        <a class="text-light" href="carrier.html"><i class="bi bi-arrow-right text-primary me-2"></i>Carrier</a>
+                    </div>
+                </div> -->
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-white mb-4">Reach To Us </h3>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="contact.html"  target="_blank">Contact</a></div>
+              
+                <div class="col-lg-4 col-md-6">
+                    <h3 class="text-white mb-4 ">Get In Touch</h3>
+                    <div class="">
+        <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin" ><i class="bi bi-linkedin" style="font-size:25px; color:#0077b5;"></i></a>
+        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"><i class="bi bi-facebook" style="font-size:25px; color:#3b5998"></i></a>
+        <a href="https://www.instagram.com/hoomantv/" class="instagram"><i class="bi bi-instagram" style="font-size:25px; color: #E4405F;"></i></a>
+        <a href="https://www.imdb.com/name/nm2557442/" class="imdb"><i class="fa fa-imdb" style="font-size:25px; color:black;"></i></a>
+        <a href="https://www.youtube.com/@hoomantv/" class="youtube"><i class="fa fa-youtube" style="font-size:25px; color:red;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+ 
+    <!-- <div class="container-fluid text-light" style="background: #051225;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-4 col-md-4 col-sm-4"><a href="privacy.html" style="color:white;">Privacy Policy</a></div>
+                <div class="col-lg-4 col-md-4 col-sm-4"><a href="refund.html" style="color:white;">Refund Policy</a></div>
+                <div class="col-lg-4 col-md-4 col-sm-4"><a href="terms.html" style="color:white;">Terms And Condition</a></div>
+            </div>
+        </div> -->
+                 <div class="row  bg-dark"  style="font-family:poppins">
+                <div class="col-md-12 text-center text-light">
+                    <p class="mt-5">&copy; <a class="text-white border-bottom" href="#"></a>2023 <a href="index.html" style="color:white;">hoomankhalili.com </a><span> | All Rights Reserved</span></p>
+                </div>
+            </div>
+        </div> 
+    </div> 
+    <!-- Footer End -->
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
@@ -154,8 +421,45 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+    const fname =document.getElementById('fname');
+// const lname =document.getElementById('lname');
+const email =document.getElementById('email');
+const phone =document.getElementById('phone');
+const submit =document.getElementsByClassName('form-contact')[0];
+
+submit.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    console.log("clicked");
+
+    let ebody=`
+    <b>Name :</b>${fname.value}
+    <br>
+    <b>Email :</b>${email.value}
+    <br>
+    <b>Phone No :</b>${phone.value}
+    <br>
+    `
+
+
+    Email.send({
+        SecureToken : "1fe3e596-e7ee-4a8d-b8c8-5a68865d0e88",
+        To : 'karanchavana2z@gmail.com',
+        From : "karanchavana2z@gmail.com",
+        Subject : "Testing Email"+ email.value,
+        Body : ebody
+    }).then(
+      message => alert(message)
+    );
+})
+
+  </script>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </body>
 

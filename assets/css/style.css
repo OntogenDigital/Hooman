@@ -1,5 +1,5 @@
 body {
-  font-family:  "Times New Roman", Times, serif;
+  font-family:"poppins";
   color: #444444;
 }
 
@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Poppins";
 }
 
 #main {
@@ -35,7 +35,7 @@ h6 {
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
-#preloader {
+/*#preloader {
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +58,7 @@ h6 {
   height: 60px;
   -webkit-animation: animate-preloader 1s linear infinite;
   animation: animate-preloader 1s linear infinite;
-}
+}*/
 
 @-webkit-keyframes animate-preloader {
   0% {
@@ -193,7 +193,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-family: "Times New Roman", Times, serif;;
+  font-family: "Poppins";
   font-size: 18px;
   font-weight: 600;
   color: #888888;
@@ -414,8 +414,4 @@ h6 {
 }
 
 
-/*--------------------------------------------------------------
-/**/
-
-
-
+/*side 2images circle*/
