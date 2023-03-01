@@ -29,191 +29,252 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
   <style type="text/css">
-    
-ul {
-  list-style: none;
+
+
+.a1{
+  background-color:#B2D8F9;
 }
 
-input {
-  overflow: hidden;
+#contact {
+  width: 100%;
+  height: 100%;
 }
 
-.section-title {
-  position: relative;
-  font-size: 30px;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  margin: 0 0 30px;
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+/*  font: 300 60px 'Oswald', sans-serif;*/
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
 }
 
-.sec-pad {
-  padding: 60px 0 0;
-  margin: 50px 0;
-}
-
-.contact-sec {
-  align-item: center;
+.contact-wrapper {
   display: flex;
-  background:  #5cbde466;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding:0px;
+  position: relative;
+  max-width: 840px;
 }
 
-.contact-sec .contact-ul li,
-.contact-ul b {
-  font-size: 20px;
-  margin: 10px 0;
-/*  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;*/
-  word-wrap: break-word;
-  color:#1c1d88;
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400;
 }
 
-.contact-sec .contact-ul i {
-  font-size:25px;
-  padding: 10px;
-  margin-right: 10px;
-  border-radius: 50%;
-  font-weight: bold;
+.form-control, 
+textarea {
+  max-width: 400px;
+  background-color:white;
+  color: #fff;
+  letter-spacing: 1px;
 }
-.contact-detail a {
-  color:#1c1d88;;
+
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  transition: all .2s ease-in-out;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px ;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
   text-decoration: none;
 }
 
-.contact-sec .contact-ul li b:hover {
-  color:purple;
-}
 
-.contact-sec .contact-ul li .fa-location-dot {
- color:#1c1d88;;
-}
-
-.contact-sec .contact-ul li .fa-phone {
-  color: #00b055;
-  border: 2px solid #00b05590;
-}
-
-.contact-sec .contact-ul li .fa-envelope {
-  color: #ff6347;
-  border: 2px solid #ff634790;
-}
-
-.contact-detail span {
-  width: 400px;
-  display: flex;
-  justify-content: center;
-}
-.contact-detail span a {
-  font-size: 20px;
-  padding: 6px 12px;
-  color: #000;
-  border-radius: 50%;
-  margin: 0px 5px;
-}
-form.contFrm {
-  max-width: 396px;
-  margin: auto;
-}
-
-.inptFld {
-  width: 80%;
-  height: 50px;
-  border: 0;
-  margin: 0 0 10px;
-  border-radius: 8px;
-  padding: 0 20px;
-  font-size: 16px;
-  color: #000;
-}
-
-.inptFld:focus {
-  outline-offset: -4px;
-  outline: 1px solid #f93;
-}
-
-/*.contFrm textarea {
-  height: 75px;
-  padding-top: 5px;
-}*/
-.inptBtn {
-  height: 50px;
-  border: 0;
-  color:#1c1d88;
-   background:white;
-  font-size: 15px;
-  
-  margin: auto;
-  letter-spacing: 1px;
-  cursor: pointer;
+/* Social Media Icons */
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
   width: 100%;
-  max-width: 200px;
-  font-weight: bold;
-}
-.inptBtn:hover {
-  color:white;
-   background:#1c1d88;
-}
-/* Responcive css Start */
-
-@media (max-width: 991px) {
-  .sec-pad {
-    padding: 20px 0 0px;
-  }
-
-  .contact-sec .contact-ul li,
-  .contact-ul b {
-    font-size: 18px;
-  }
-
-  .contact-sec .contact-ul i {
-    font-size: 14px;
-    padding: 6px;
-    margin-right: 6px;
-  }
-
-  .inptFld {
-    height: 40px;
-    margin: 0 0 10px;
-    padding: 0 14px;
-    font-size: 14px;
-  }
+  margin: 0 auto;
+  padding: 0;
 }
 
-@media (max-width: 767px) {
-  .contact-detail span {
-    width: auto;
+.social-media-list h1 a {
+  color: #fff;
+}
+
+.social-media-list h1 {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color:white;
+  cursor: pointer; 
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list h1:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list h1:hover {
+  background-color:black; 
+}
+
+.social-media-list h1:hover:after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+.social-media-list h1:hover a {
+  color: #fff;
+}
+
+hr {
+  border-color: black;
+  color: black;
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
   }
-  .contact-detail span a {
-    font-size: 18px;
-    padding: 5px 10px;
-    color: #000;
-    border-radius: 50%;
-    margin: 0px 5px 20px;
+  .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+  }  
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list h1 {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list h1:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
   }
 }
 
-@media (max-width: 575px) {
-  .section-title {
-    font-size: 26px;
-    font-weight: 500;
-  }
-  .contact-sec {
-    border-radius: 10% 10% 0% 0% / 5% 5% 0% 0%;
-  }
+@media screen and (max-width: 569px) {
 
-  .contact-sec .contact-ul i {
-    border: none;
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    
+    margin: 0 auto;h1
   }
-  .inptFld {
-    height: 36px;
-    margin: 0 0 8px;
-    padding: 0 14px;
-    font-size: 14px;
+ 
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
   }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
 }
 
-@media (max-width: 480px) {
-  .contact-sec .contact-ul li,
-  .contact-ul b {
-    font-size:20px;
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
   }
 }
   </style>
@@ -227,8 +288,7 @@ form.contFrm {
 </head>
 
 <body>
-
-  <!-- ======= Header ======= -->
+ <!-- ======= Header ======= -->
   <header id="header" class="fixed-top" style="background-color:white;" >
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
@@ -241,107 +301,95 @@ form.contFrm {
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
            <li><a href="index.html" style="color:black;">Home</a></li>
+          <li><a href="mural.html" style="color:black;">Mural</a></li>
+          <li><a href="about.html" style="color:black;">Insights</a></li>
           <li><a href="LatestNews.html" style="color:black;">Latest News</a></li>
-          <li><a href="PhotosVideos.html" style="color:black;">Photos & Videos</a></li>
           <li><a href="contact.html" style="color:black;">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-         <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin"><i class="bi bi-linkedin" style="font-size:20px; color:#0077b5;"></i></a>
-        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"><i class="bi bi-facebook" style="font-size:20px; color:#3b5998"></i></a>
-        <a href="https://www.instagram.com/hoomantv/" class="instagram"><i class="bi bi-instagram" style="font-size:20px; color: #E4405F;"></i></a>
-        <a href="https://www.imdb.com/name/nm2557442/" class="imdb"><i class="fa fa-imdb" style="font-size:20px; color:black;"></i></a>
-        <a href="https://www.youtube.com/@hoomantv/" class="youtube"><i class="fa fa-youtube" style="font-size:20px; color:red;"></i></a>
+         <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin" target="_blank"><i class="bi bi-linkedin" style="font-size:20px; color:#0077b5;"></i></a>
+        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"target="_blank"><i class="bi bi-facebook" style="font-size:20px; color:#3b5998"></i></a>
+        <a href="https://www.instagram.com/hoomantv/" class="instagram"target="_blank"><i class="bi bi-instagram" style="font-size:20px; color: #E4405F;"></i></a>
+        <a href="https://www.imdb.com/name/nm2557442/" class="imdb"target="_blank"><i class="fa fa-imdb" style="font-size:20px; color:black;"></i></a>
+        <a href="https://www.youtube.com/@hoomantv/" class="youtube"target="_blank"><i class="fa fa-youtube" style="font-size:20px; color:red;"></i></a>
       </div>
 
     </div>
 
   </header><!-- End Header -->
-<hr style="color:#1c1d88;">
 
 
-
-
-
-
-<!-- contact form start -->
-<section>
-<div class="container">
-<div class="row text-center mt-5">
-  <div class="col-lg-12 col-sm-12 col-md-12 mt-5">
-    <h2 style="color:#1c1d88;font-size: 50px;">I will be in Touch</h2>
-    <p style="font-size:20px;" class="mt-3">Want to contribute your little time to reach me. Then fill the below form:
-</p></div></div></div>
-
-<section class="contact-sec sec-pad">
-  <div class="col-md-12">
-   <h1 class="section-title text-center mb-5" style="color:#1c1d88">Contact us</h1>
+<section class="text-center mt-5 " style="color:#1c1d88;font-size: 50px;">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
-        <div class="contact-detail">
-         
-
-          <ul class="contact-ul">
-            <li><b><i class="fa fa-map-marker"></i>California , United States</b></li>
-            <div class="row">
-             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25892400.01620521!2d-132.6220366875!3d37.60937518399033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb9fe5f285e3d%3A0x8b5109a227086f55!2sCalifornia%2C%20USA!5e0!3m2!1sen!2sin!4v1677579597772!5m2!1sen!2sin" width="200" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></iframe>
-            </div>
-            <li style="font-weight: bold;">
-              <a href="tel:08510004495" target="_blank"><b> <i class="bi bi-phone"></i></b></a>
-            </li>
-
-            <li>
-              <a href="" target="_blank"><b><i class="bi-solid bi-envelope"></i>tvhooman@gmail.com</b></a>
-            </li>
-          </ul>
-
-          <span>
-       <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin" ><i class="bi bi-linkedin" style="font-size:25px; color:#0077b5;"></i></a>
-        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"><i class="bi bi-facebook" style="font-size:25px; color:#3b5998"></i></a>
-        <a href="https://www.instagram.com/hoomantv/" class="instagram"><i class="bi bi-instagram" style="font-size:25px; color: #E4405F;"></i></a>
-        <a href="https://www.imdb.com/name/nm2557442/" class="imdb mt-1"><i class="fa fa-imdb" style="font-size:25px; color:black;"></i></a>
-        <a href="https://www.youtube.com/@hoomantv/" class="youtube"><i class="fa fa-youtube" style="font-size:25px; color:red;"></i></a>
-          </span>
+   <h2 style="color:#1c1d88;font-size: 50px;" class="mt-5">I will be in Touch</h2>
+    <p style="font-size:20px;font-weight:bold;"class="mt-3">Want to contribute your little time to reach me. Then fill the below form:</p>
+</section>
+<section class="mt-5 a1 p-5">
+  
+  <!-- <h1 class="section-header">Contact</h1> -->
+  
+  <div class="contact-wrapper">
+  
+  <!-- Left contact page --> 
+    
+    <form action="#" role="form" class="form-contact">
+       <!-- <form action="#" class="form-contact"> -->
+      <div class="form-group">
+        <div class="col-sm-12 mb-4">
+          <input type="text" class="form-control" id="fname" placeholder="NAME" name="name" value="" required>
         </div>
       </div>
 
-      <div class="col-md-6 mb-5 mt-5">
-          <form action="#" class="form-contact">
-          <div class="row">
-            <div class="col-sm-12 text-center ">
-                     <input type="text" id="fname" placeholder="type your first name" class="inptFld" required >
-
-            </div>
-
-            <div class="col-sm-12 text-center ">
-                     <input type="email" id="email" placeholder="type your email name"class="inptFld" required >
-
-            </div>
-
-            <div class="col-sm-12 text-center">
-                      <input type="text" id="phone" placeholder="type your phone number"class="inptFld" required >
-
-            </div>
-
-          <!--   <div class="col-sm-12 text-center ">
-              <input type="text" name="sub" placeholder="Subject" class="inptFld" required />
-            </div> -->
-
-          <!--   <div class="col-12">
-              <textarea class="inptFld" rows="" cols="" placeholder="Your Message..." required></textarea>
-            </div> -->
-
-            <div class="col-12 mt-5 text-center" style="">
-                      <input type="submit" id="submit" class="inptBtn" style="border-radius: 10px;">      </div>
-          </div>
-        </form>
+      <div class="form-group">
+        <div class="col-sm-12 mb-4">
+          <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+        </div>
       </div>
-    </div>
-</div>
-</div>
+       <div class="form-group">
+        <div class="col-sm-12 mb-4">
+          <input type="text" class="form-control" id="phone" placeholder="PHONE" name="phone" value="" required>
+        </div>
+      </div>
+      <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+        <div class="alt-send-button">
+          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+        </div>      
+      </button>
+    </form>
+  <!-- Left contact page --> 
+    
+      <div class="direct-contact-container">
+
+        <ul class="contact-list">
+           <!-- <li class="list-item"><i class="fa fa-phone fa-2x"><span class="contact-text phone"><a href="tel:1-212-555-5555" title="Give me a call">(212) 555-2368</a></span></i></li> -->
+          
+          <li class="list-item" style="font-size:18px; color:#0077b5;"><a href="mailto:webmaster@example.com" title="Send me an email" style="color:#0077b5;font-weight: bold;"><i class="fa fa-envelope fa-2x"> tvhooman@gmail.com</a></span></i></li>
+          
+        </ul>
+
+        <hr>
+        <ul class="social-media-list">
+         <a href="https://www.linkedin.com/in/hoomankhalili/" target="_blank" class="contact-icon">
+         <i class="bi bi-linkedin" style="font-size:25px; color:#0077b5;"></i></a>
+         
+         <a href="https://www.facebook.com/hoomankhalili/" target="_blank" class="contact-icon">
+         <i class="bi bi-facebook" style="font-size:25px; color:#3b5998"></i></a>
+         
+         <a href="https://www.instagram.com/hoomantv/" target="_blank" class="contact-icon">
+         <i class="bi bi-instagram" style="font-size:25px; color: #E4405F;"></i></a>
+         
+         <a href="https://www.imdb.com/name/nm2557442/" target="_blank" class="contact-icon">
+        <i class="fa fa-imdb" style="font-size:25px; color:black;"></i></a>
+            
+           <a  href="https://www.youtube.com/@hoomantv/" target="_blank" class="contact-icon">
+       <i class="fa fa-youtube" style="font-size:25px; color:red;"></i></a>
+                
+        </ul>
+       <hr>
 </section>
 <!-- form end -->
 <div class="col-lg-12 col-sm-12 col-md-12 text-center mt-5 mb-5" style="font-style: italic; font-weight:bold; color:#1c1d88; font-size:30px;">"Woman is the most Beautiful Creation made by God, Respect her!"</div></div>
@@ -350,21 +398,19 @@ form.contFrm {
 
 
 
-
-
-
-
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light" style="font-family:poppins">
+    <div class="container-fluid text-light  wow fadeInUp " data-wow-delay="0.3s" style="background-color: 
+#1f2e4a; font-family:poppins">
         <div class="container pt-5">
             <div class="row g-5 pt-4">
                 <div class="col-lg-4 col-md-6">
                     <h3 class="text-white mb-4">Quick Links</h3>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                        <a class="text-light mb-2" href="" id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Latest News</a>
-                        <a class="text-light mb-2" href="#"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Photos & Videos</a>
-                        <a class="text-light" href="#"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                         <a class="text-light mb-2" href="mural.html"><i class="bi bi-arrow-right text-primary me-2"></i>Mural</a>
+                        <a class="text-light mb-2" href="LatestNews.html"><i class="bi bi-arrow-right text-primary me-2"></i>Latest News</a>
+                        <a class="text-light mb-2" href="about.html"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Insights</a>
+                        <a class="text-light" href="contact.html"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
                     </div>
                 </div>
                 <!-- <div class="col-lg-4 col-md-6">
@@ -379,31 +425,22 @@ form.contFrm {
                 </div> -->
                 <div class="col-lg-4 col-md-6">
                     <h3 class="text-white mb-4">Reach To Us </h3>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="contact.html"  target="_blank">Contact</a></div>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="contact.html"  target="_blank"style="background-color:white;color:#1c1d88;font-weight: bold;"><b >Contact</b></a></div>
               
                 <div class="col-lg-4 col-md-6">
                     <h3 class="text-white mb-4 ">Get In Touch</h3>
                     <div class="">
-        <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin" ><i class="bi bi-linkedin" style="font-size:25px; color:#0077b5;"></i></a>
-        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"><i class="bi bi-facebook" style="font-size:25px; color:#3b5998"></i></a>
-        <a href="https://www.instagram.com/hoomantv/" class="instagram"><i class="bi bi-instagram" style="font-size:25px; color: #E4405F;"></i></a>
-        <a href="https://www.imdb.com/name/nm2557442/" class="imdb"><i class="fa fa-imdb" style="font-size:25px; color:black;"></i></a>
-        <a href="https://www.youtube.com/@hoomantv/" class="youtube"><i class="fa fa-youtube" style="font-size:25px; color:red;"></i></a>
+        <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin"target="_blank" ><i class="bi bi-linkedin" style="font-size:25px; color:#0077b5;"></i></a>
+        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"target="_blank"><i class="bi bi-facebook" style="font-size:25px; color:#3b5998"></i></a>
+        <a href="https://www.instagram.com/hoomantv/" class="instagram"target="_blank"><i class="bi bi-instagram" style="font-size:25px; color: #E4405F;"></i></a>
+        <a href="https://www.imdb.com/name/nm2557442/" class="imdb"target="_blank"><i class="fa fa-imdb" style="font-size:25px; color:black;"></i></a>
+        <a href="https://www.youtube.com/@hoomantv/" class="youtube"target="_blank"><i class="fa fa-youtube" style="font-size:25px; color:red;"></i></a>
                     </div>
                 </div>
             </div>
         </div>
    
- 
-    <!-- <div class="container-fluid text-light" style="background: #051225;">
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-lg-4 col-md-4 col-sm-4"><a href="privacy.html" style="color:white;">Privacy Policy</a></div>
-                <div class="col-lg-4 col-md-4 col-sm-4"><a href="refund.html" style="color:white;">Refund Policy</a></div>
-                <div class="col-lg-4 col-md-4 col-sm-4"><a href="terms.html" style="color:white;">Terms And Condition</a></div>
-            </div>
-        </div> -->
-                 <div class="row  bg-dark"  style="font-family:poppins">
+                 <div class="row "  style="background-color:#1f2e4a;  font-family:poppins">
                 <div class="col-md-12 text-center text-light">
                     <p class="mt-5">&copy; <a class="text-white border-bottom" href="#"></a>2023 <a href="index.html" style="color:white;">hoomankhalili.com </a><span> | All Rights Reserved</span></p>
                 </div>

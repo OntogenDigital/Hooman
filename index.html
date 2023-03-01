@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +24,7 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 
@@ -31,191 +32,173 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
    <style type="text/css">
-      /*    * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  outline: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri;
-  direction: ltr;
+
+/*cards css*/
+.page-content {
+  display: grid;
+  grid-gap:0.5rem;
+  padding: 2rem;
+  max-width: 1024px;
+  margin: 0 auto;
+  font-family: var(--font-sans);
 }
-*/
-
-
-@media (min-width: 768px) {
-  .image-slider-container {
-    width: 100%;
-    margin: 20px auto;
+@media (min-width: 600px) {
+  .page-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 800px) {
+  .page-content {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.image-slider-container .image-slider-heading {
+.card {
+  position: relative;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 15px;
-}
-
-.image-slider-container .image-slider-heading h2 {
-  font-size: 17px;
-  color:#1c1d88;
-  text-align: center;
-}
-
-.image-slider-container .image-slider-heading .swiper-pagination {
-  position: relative;
-  width: auto;
-  padding: 0;
-  margin: 0;
-  top: 0;
-  bottom: 0;
-}
-
-.image-slider-container .image-slider-heading .swiper-pagination .swiper-pagination-bullet {
-  background-color: #e4e4e4;
-  opacity: 100%;
-  width: 20px;
-  height: 10px;
-  border-radius: 100px;
-  transition: 0.5s;
-  margin: 0px 3px;
-}
-
-.image-slider-container .image-slider-heading .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--theme);
-  width: 30px;
-}
-
-.image-slider-container .swiper {
-  position: relative;
-}
-
-.image-slider-container .swiper .swiper-slide {
-  width: 300px; 
- 
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con {
+  align-items: flex-end;
   overflow: hidden;
-  height: 300px;
-  margin: 0px 0px;
-  position: relative;
-  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 2px 2px rgba(0, 0, 0, 0.1), 0 4px 4px rgba(0, 0, 0, 0.1), 0 8px 8px rgba(0, 0, 0, 0.1), 0 16px 16px rgba(0, 0, 0, 0.1);
 }
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details {
-  padding: 10px;
- overflow :hidden;
+@media (min-width: 600px) {
+  .card {
+    height: 400px;
+    width: 250px;
+  }
+}
+.card:before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  display: none;
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-info {
-  text-align: left;
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-info h2 {
-  font-size: 15px;
-  padding: 5px 0px 5px 0px;
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-info span {
-  font-size: 13px;
-  margin-right: 0px;
-  color: #727272;
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-btns {
-  display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-btns a {
-  text-decoration: none;
-  color: white;
-  padding: 5px 5px;
-  font-size: 13px;
-  margin: 0px 3px;
-  border-radius: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: transparent;
-  color: white;
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-btns a svg {
-  font-size: 15px;
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-btns a:hover {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-btns .imdb-rate {
   width: 100%;
-  font-size: 20px;
-  color:white;
-  background-color: #1c1d88;
-
+  height: 110%;
+  background-size: contain;
+  background-position: 0 0;
+  transition: transform calc(var(--d) * 1.5) var(--e);
+  pointer-events: none;
+}
+.card:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%;
+  pointer-events: none;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.009) 11.7%, rgba(0, 0, 0, 0.034) 22.1%, rgba(0, 0, 0, 0.072) 31.2%, rgba(0, 0, 0, 0.123) 39.4%, rgba(0, 0, 0, 0.182) 46.6%, rgba(0, 0, 0, 0.249) 53.1%, rgba(0, 0, 0, 0.32) 58.9%, rgba(0, 0, 0, 0.394) 64.3%, rgba(0, 0, 0, 0.468) 69.3%, rgba(0, 0, 0, 0.54) 74.1%, rgba(0, 0, 0, 0.607) 78.8%, rgba(0, 0, 0, 0.668) 83.6%, rgba(0, 0, 0, 0.721) 88.7%, rgba(0, 0, 0, 0.762) 94.1%, rgba(0, 0, 0, 0.79) 100%);
+  transform: translateY(-50%);
+  transition: transform calc(var(--d) * 2) var(--e);
+}
+.card:nth-child(1):before {
+  background-image: url(img/Muralc1.png);
+}
+.card:nth-child(2):before {
+  background-image: url(img/Muralc2.png);
+}
+.card:nth-child(3):before {
+  background-image: url(img/Muralc3.png);
+}
+.card:nth-child(4):before {
+  background-image: url(img/Muralc4.png);
 }
 
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-btns .like:hover {
-  color: white;
-  background-color: #ff2a00;
-  border: 0;
-
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con .slide-details .movie-btns .show-movie:hover {
-  color: white;
-  background-color: #2a4aff;
-  border: 0;
-}
-
-.image-slider-container .swiper .swiper-slide .slide-con:hover .slide-details {
+.content {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  transition: transform var(--d) var(--e);
+  z-index: 1;
+}
+.content > * + * {
+  margin-top: 1rem;
 }
 
-.image-slider-container .swiper .swiper-slide .slide-con:hover div.movie-info {
-  animation: 40s 1 m;
-
+.title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
 }
 
-@keyframes m {
-  from {
-    transform: translateY(-85px);
-  }
-  1% {
-    transform: translateY(60px);
-  }
-  1.5% {
-    transform: translateY(0px);
-  }
-  2% {
-    transform: translateY(20px);
-  }
-  2.5% {
-    transform: translateY(0px);
-  }
-  to {
-    transform: translateY(0px);
-  }
+.copy {
+  font-family: var(--font-serif);
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.35;
 }
 
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.80rem;
+  font-weight: bolder;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+.btn:hover {
+  background-color: #0d0d0d;
+}
+.btn:focus {
+  outline: 1px dashed yellow;
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (min-width: 600px) {
+  .card:after {
+    transform: translateY(0);
+  }
+
+  .content {
+    transform: translateY(calc(100% - 4.5rem));
+  }
+  .content > *:not(.title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+  }
+
+  .card:hover,
+.card:focus-within {
+    align-items: center;
+  }
+  .card:hover:before,
+.card:focus-within:before {
+    transform: translateY(-4%);
+  }
+  .card:hover:after,
+.card:focus-within:after {
+    transform: translateY(-50%);
+  }
+  .card:hover .content,
+.card:focus-within .content {
+    transform: translateY(0);
+  }
+  .card:hover .content > *:not(.title),
+.card:focus-within .content > *:not(.title) {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: calc(var(--d) / 8);
+  }
+
+  .card:focus-within:before, .card:focus-within:after,
+.card:focus-within .content,
+.card:focus-within .content > *:not(.title) {
+    transition-duration: 0s;
+  }
+}
 </style>
 
  
@@ -236,19 +219,20 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
            <li><a href="index.html" style="color:black;">Home</a></li>
+          <li><a href="mural.html" style="color:black;">Mural</a></li>
+          <li><a href="about.html" style="color:black;">Insights</a></li>
           <li><a href="LatestNews.html" style="color:black;">Latest News</a></li>
-          <li><a href="PhotosVideos.html" style="color:black;">Photos & Videos</a></li>
           <li><a href="contact.html" style="color:black;">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
       <div class="header-social-links">
-         <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin"><i class="bi bi-linkedin" style="font-size:20px; color:#0077b5;"></i></a>
-        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"><i class="bi bi-facebook" style="font-size:20px; color:#3b5998"></i></a>
-        <a href="https://www.instagram.com/hoomantv/" class="instagram"><i class="bi bi-instagram" style="font-size:20px; color: #E4405F;"></i></a>
-        <a href="https://www.imdb.com/name/nm2557442/" class="imdb"><i class="fa fa-imdb" style="font-size:20px; color:black;"></i></a>
-        <a href="https://www.youtube.com/@hoomantv/" class="youtube"><i class="fa fa-youtube" style="font-size:20px; color:red;"></i></a>
+         <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin" target="_blank"><i class="bi bi-linkedin" style="font-size:20px; color:#0077b5;"></i></a>
+        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"target="_blank"><i class="bi bi-facebook" style="font-size:20px; color:#3b5998"></i></a>
+        <a href="https://www.instagram.com/hoomantv/" class="instagram"target="_blank"><i class="bi bi-instagram" style="font-size:20px; color: #E4405F;"></i></a>
+        <a href="https://www.imdb.com/name/nm2557442/" class="imdb"target="_blank"><i class="fa fa-imdb" style="font-size:20px; color:black;"></i></a>
+        <a href="https://www.youtube.com/@hoomantv/" class="youtube"target="_blank"><i class="fa fa-youtube" style="font-size:20px; color:red;"></i></a>
       </div>
 
     </div>
@@ -256,150 +240,62 @@
   </header><!-- End Header -->
 <hr style="color:#1c1d88;">
 
-
+<!-- video start -->
 <div class="container-fluid mt-5">
-  <div class="row mt-3">
+  <div class="row mt-5">
     <div class="col-lg-12 col-sm-12">
-       <video autoplay muted loop style="width:100%; height:100%; margin-top:rem;">
+       <video autoplay muted loop style="width:100%; height:100%; margin-top:1rem;">
           <source src="img/Hooman khalili heading (2000800).mp4" type="video/mp4"/ >
         </video>
     </div>
   </div>
 </div>
-
-<!-- slider section -->
-  <section>
-    <div class="container-fluid mt-5  text-center">
-    <div class="row">
-    <div class="col-lg-12 col-sm-12"><h1 style="color:#1c1d88;font-weight: bold;font-size: 50px;">Latest News</h1>
-    </div></div></div>
-    <section class="image-slider-container mt-2 ml-5" >
-        <div class="image-slider-heading" >
-           
-            <div class="swiper-pagination"></div>
-        </div>
-        <div class="swiper mt-4">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="slide-con">
-                        <img src="img/9E4A1939.jpg" 
-                            alt="" style="width:300px;height: 300px;">
-                        <div class="slide-details">
-                            <div class="movie-info">
-                                <h2 style="color:white;  font-size: 20px;">American Christian lead the way by presenting murals supporting freedom-fighting Iranians</h2>
-                                    <span style="color:white; font-size: 20px;">January 14, 2023</span>
-                            </div>
-                            <div class="movie-btns">
-                                <a href="articale1.html" class="imdb-rate" title="">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slide-con"> <img src="img/9E4A1914.jpg" 
-                            alt="" style="width:300px;height: 300px;">
-                            <div class="slide-details">
-                                <div class="movie-info">
-                                    <h2 style="color:white; font-size:20px">Women Empowerment : Stop Sympathising and Start Supporting</h2>
-                                    <span style="color:white; font-size: 20px;">January 14, 2023</span>
-                                     </div>
-                                <div class="movie-btns">
-                              <a href="articale2.html" class="imdb-rate" title="">Read More</a>
-                                   
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                 <div class="swiper-slide">
-                    <div class="slide-con"> <img src="img/9E4A1937.jpg" 
-                            alt="" style="width:300px;height: 300px;">
-                            <div class="slide-details">
-                                <div class="movie-info">
-                                    <h2 style="color:white;  font-size: 20px;">The Milestone of Multi-Tasking Personality: Hooman Khalili
-                                    </h2>
-                                    <span style="color:white; font-size: 20px;">January 14, 2023</span>
-                                    
-                                </div>
-                                <div class="movie-btns">
-                                    <a href="articale3.html" class="imdb-rate" title="">Read More</a>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-                <div class="swiper-slide">
-                    <div class="slide-con"> <img src="img/9E4A1913.jpg" 
-                            alt="" style="width:300px;height: 300px;">
-                            <div class="slide-details">
-                                <div class="movie-info">
-                                  <h2 style="color:white;  font-size: 20px;">                      Thor in the infinte warfare</h2>
-                                    <span style="color:white; font-size: 20px;">January 14, 2023</span>
-                                </div>
-                                <div class="movie-btns">
-                                <a href="#" class="imdb-rate" title="">Read More</a>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            </div></div></section></section>
-    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-   <script>
-        new Swiper(".swiper", {
-            loop: true,
-            effect: 'coverflow',
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            speed: 1000,
-            pagination: {
-                el:'.swiper-pagination',
-                clickable: true, 
-            
-            },
-  
-            breakpoints : {
-            800: {
-                centeredSlides: false,
-             coverflowEffect:{
-
-          depth: 0, 
-
-          rotate: 0, 
-
-          stretch : -10, 
-
-         
-
-         } 
-            }
-            },
-             autoplay: {
-              delay: 4000,
-             },
-         coverflowEffect:{
-          depth: 80, 
-          rotate: 50, 
-          stretch : 20, 
-         
-         } 
-        })
-    </script>
-
-<!-- slider section end -->
+<!-- video end -->
 
 
+<!-- cards start -->
+<section>
+<main class="page-content mt-5 mb-5">
+  <div class="card mt-3">
+    <div class="content">
+      <h2 class="title">January 14, 2023</h2>
+      <p class="copy">American Christian lead the way by presenting murals supporting freedom-fighting Iranians</p>
+      <button class="btn"style="background-color:white;color:#1c1d88;"><a href="articale1.html" ><b style="color:#1c1d88;">Read More</b></a></button>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="content">
+      <h2 class="title">January 14, 2023</h2>
+      <p class="copy">Women Empowerment : Stop Sympathising and Start Supporting</p>
+       <button class="btn"style="background-color:white;color:#1c1d88;"><a href="articale2.html" ><b style="color:#1c1d88;">Read More</b></a></button>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="content">
+      <h2 class="title">January 14, 2023</h2>
+      <p class="copy">The Milestone of Multi-Tasking Personality: Hooman Khalili</p>
+       <button class="btn"style="background-color:white;color:#1c1d88;"><a href="articale3.html" ><b style="color:#1c1d88;">Read More</b></a></button>
+    </div>
+  </div>
+  <div class="card mt-3">
+    <div class="content">
+      <h2 class="title">January 14, 2023</h2>
+      <p class="copy">Thor in the infinte warfare</p>
+       <button class="btn"style="background-color:white;color:#1c1d88;"><a href="articale4.html" ><b style="color:#1c1d88;">Read More</b></a></button>
+    </div>
+  </div>
+</main>
+</section>
 
-<!-- content with image -->
-<!-- <section>
-    <div class="container-fluid mt-5 mb-5 text-center">
-    <div class="row">
-    <div class="col-lg-12 col-sm-12"><img src=""></h1>
-    </div></div></div> -->
+<!-- cards end -->
 
 
-
+<!-- porm start -->
 <section style="background:linear-gradient(130deg,#1c1d88,white,white,white,white,white,white,white,white,white,white,#1c1d88);">
- <div class="container-fluid p-5 text-center">
-    <div class="row">
-    <div class="col-lg-12 col-sm-12 " style="color:black;font-weight: bold;font-size: 24px;line-height: 1.9;">He stands with "women, side by side,<br>
+ <div class="container-fluid p-5">
+    <div class="row text-center">
+      <div class="col-lg-2 col-md-2 mt-3 mb-2"></div>
+    <div class="col-lg-8 col-sm-8 mt-5 mb-5" style="color:black;font-weight: bold;font-size: 23px;line-height: 1.6; ">He stands with "women, side by side,<br>
 Fighting for justice, with pride.<br>
 A man who understands their plight,<br>
 Giving them strength to shine bright.<br><br>
@@ -409,20 +305,17 @@ Empowering women, breaking free from the chains.<br>
 He's a beacon of hope in a world of hate,<br>
 A true ally, never too late."
 </div>
+<div class="col-lg-2 col-md-2"></div>
 </div>
 </div></section>
+<!-- poem end -->
 
-<!-- <section>
-    <div class="container-fluid mt-5 mb-2 text-center">
-    <div class="row">
-    <div class="col-lg-12 col-sm-12"><h1 style="color:#1c1d88;font-weight: bold;font-size: 50px;">Mural 1</h1>
-    </div></div></div> -->
 
 
 <!-- mural section start -->
 <section style="background-color:#ADD8E6;">
   <div class="container-fluid">
-    <img src="img/Mural 1 new headin  (1200 × 400 px).png" class="w-100 h-100">
+    <img src="img/murall.png" class="w-100 h-100">
   </div>
 
 
@@ -526,16 +419,18 @@ Hooman was also the choir director of St. Nicholas Antiochian Orthodox Church in
 
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light  wow fadeInUp " data-wow-delay="0.3s" style="font-family:poppins">
+    <div class="container-fluid text-light  wow fadeInUp " data-wow-delay="0.3s" style="background-color: 
+#1f2e4a; font-family:poppins">
         <div class="container pt-5">
             <div class="row g-5 pt-4">
                 <div class="col-lg-4 col-md-6">
                     <h3 class="text-white mb-4">Quick Links</h3>
                     <div class="d-flex flex-column justify-content-start">
                         <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Home</a>
-                        <a class="text-light mb-2" href="" id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Latest News</a>
-                        <a class="text-light mb-2" href="#"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Photos & Videos</a>
-                        <a class="text-light" href="#"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
+                         <a class="text-light mb-2" href="mural.html"><i class="bi bi-arrow-right text-primary me-2"></i>Mural</a>
+                        <a class="text-light mb-2" href="LatestNews.html"><i class="bi bi-arrow-right text-primary me-2"></i>Latest News</a>
+                        <a class="text-light mb-2" href="about.html"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Insights</a>
+                        <a class="text-light" href="contact.html"id="seo1"><i class="bi bi-arrow-right text-primary me-2"></i>Contact</a>
                     </div>
                 </div>
                 <!-- <div class="col-lg-4 col-md-6">
@@ -550,22 +445,22 @@ Hooman was also the choir director of St. Nicholas Antiochian Orthodox Church in
                 </div> -->
                 <div class="col-lg-4 col-md-6">
                     <h3 class="text-white mb-4">Reach To Us </h3>
-                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="contact.html"  target="_blank">Contact</a></div>
+                    <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="contact.html"  target="_blank"style="background-color:white;color:#1c1d88;font-weight: bold;"><b >Contact</b></a></div>
               
                 <div class="col-lg-4 col-md-6">
                     <h3 class="text-white mb-4 ">Get In Touch</h3>
                     <div class="">
-        <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin" ><i class="bi bi-linkedin" style="font-size:25px; color:#0077b5;"></i></a>
-        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"><i class="bi bi-facebook" style="font-size:25px; color:#3b5998"></i></a>
-        <a href="https://www.instagram.com/hoomantv/" class="instagram"><i class="bi bi-instagram" style="font-size:25px; color: #E4405F;"></i></a>
-        <a href="https://www.imdb.com/name/nm2557442/" class="imdb"><i class="fa fa-imdb" style="font-size:25px; color:black;"></i></a>
-        <a href="https://www.youtube.com/@hoomantv/" class="youtube"><i class="fa fa-youtube" style="font-size:25px; color:red;"></i></a>
+        <a href="https://www.linkedin.com/in/hoomankhalili/" class="linkedin"target="_blank" ><i class="bi bi-linkedin" style="font-size:25px; color:#0077b5;"></i></a>
+        <a href="https://www.facebook.com/hoomankhalili/" class="facebook"target="_blank"><i class="bi bi-facebook" style="font-size:25px; color:#3b5998"></i></a>
+        <a href="https://www.instagram.com/hoomantv/" class="instagram"target="_blank"><i class="bi bi-instagram" style="font-size:25px; color: #E4405F;"></i></a>
+        <a href="https://www.imdb.com/name/nm2557442/" class="imdb"target="_blank"><i class="fa fa-imdb" style="font-size:25px; color:black;"></i></a>
+        <a href="https://www.youtube.com/@hoomantv/" class="youtube"target="_blank"><i class="fa fa-youtube" style="font-size:25px; color:red;"></i></a>
                     </div>
                 </div>
             </div>
         </div>
    
-                 <div class="row  bg-dark"  style="font-family:poppins">
+                 <div class="row "  style="background-color:#1f2e4a;  font-family:poppins">
                 <div class="col-md-12 text-center text-light">
                     <p class="mt-5">&copy; <a class="text-white border-bottom" href="#"></a>2023 <a href="index.html" style="color:white;">hoomankhalili.com </a><span> | All Rights Reserved</span></p>
                 </div>

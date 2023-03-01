@@ -28,18 +28,89 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<style type="text/css">
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*body {
+  padding: 2rem;
+}
+*/ul {
+  padding: 1rem;
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+/*li {
+  background-color: #ffdfd9;
+  color: #000;
+  padding: 0.51rem;
+}*/
+.container2 {
+  margin-top:5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 290px));
+  grid-gap: 2rem;
+  padding: 1rem;
+  justify-content: center;
+  box-shadow: 0 1px 1px #000;
+}
+.img1 {
+  background-position: top;
+  background-size: cover;
+  height: 200px;
+  width: 290px;
+  box-shadow: 0 2px 10px #000;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.img1:hover {
+  box-shadow: none;
+  transform: scale(1.1);
+}
 
-  <!-- =======================================================
-  * Template Name: Kelly - v4.10.0
-  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+    
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+</style>
 </head>
 
 <body>
-
-  <!-- ======= Header ======= -->
+ <!-- ======= Header ======= -->
   <header id="header" class="fixed-top" style="background-color:white;" >
     <div class="container-fluid d-flex justify-content-between align-items-center">
 
@@ -71,84 +142,166 @@
     </div>
 
   </header><!-- End Header -->
+<hr style="color:#1c1d88;">
 
-<hr>
-<section >
-  <div class="container-fluid mt-5">
-    <div class="row mt-5">
-      <div class="col-lg-12 col-sm-12 text-center mt-5">
-        <h1 style="color:#1c1d88; ">Women Empowerment<br><span> Stop Sympathising and Start Supporting</span></h1>
-        <p>Posted On <span style="color:#1c1d88; font-weight: bold;">January 14, 2023</span></p>
-      </div>
+
+
+
+<!-- new pic start -->
+<section>
+         <div class="container-fluid mt-5">
+         <div class="row mt-5"> 
+        <div class="col-lg-12 text-center mt-5">
+                <h2 style="color:#1c1d88;font-size: 50px;font-weight: bold;">Photos</h2>
+        </div>
+        </div>
+       </div>
+
+     <div class="container text-center my-3 mt-5 mb-5">
+     <!-- <h2 style="color:#1c1d88;font-size: 30px;font-weight: bold;">Mural 1 &nbsp &nbsp &nbsp<a href="https://goo.gl/maps/FQ3y6c12NZvcmMo26" style="color:#1c1d88;font-size: 30px;font-weight: bold;"><b><i class="fa fa-map-marker"></i></b></a></h2> -->
+    <div class="row mx-auto my-auto justify-content-center">
+        <div id="recipeCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/hk19.PNG" class="img-fluid">
+                            </div>
+                            <div class="card-img-overlay"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/hk16.png" class="img-fluid">
+                            </div>
+                            <div class="card-img-overlay"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/h13.JPG" class="img-fluid">
+                            </div>
+                            <div class="card-img-overlay"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/hk14.PNG" class="img-fluid">
+                            </div>
+                            <div class="card-img-overlay"> </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-img">
+                                <img src="img/articale32.png" class="img-fluid">
+                            </div>
+                            <div class="card-img-overlay"> </div>
+                        </div>
+                    </div>
+                </div>      
+            </div>
+            <a class="carousel-control-prev bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next bg-transparent w-aut" href="#recipeCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- videos -->
+
+<section>
+<div class="container-fluid mt-5">
+  <div class="row text-center">
+    <div class="col-lg-12 col-sm-12 ">
+     <h2 style="color:#1c1d88;font-size:50px;font-weight: bold;">Videos</h2>
     </div>
   </div>
- <hr style="color:#1c1d88;">
-      <div class="container text-center">
-        <div class="row">
-        <div class="col-lg-2 col-sm-2 text-center"></div>
+</div>
 
-      <div class="col-lg-8 col-sm-8 text-center">
-      <h6 style="font-size:20px; font-style:italic; text-align: justify;">Showcasing sympathy towards women is not only what you can do when it comes to Women Empowerment. However, supporting them to protect their rights and freedom can be the simplest way to reach towards the betterment<br> of society.</h6>
-      </div>
-      <div class="col-lg-2 col-sm-2 text-center"></div>
+<div class="container-fluid mt-5">
+  <div class="row">
+    <div class="col-md-3 col-sm-3 mt-5">
+    <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/xPQAdS1E2tA">
+    </iframe>
+    </div>
+    <div class="col-md-3 col-sm-3 mt-5">
+     <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/XSMnNK-66Y8">
+    </iframe>
+    </div>
+    <div class="col-md-3 col-sm-3 mt-5">
+     <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/SnhloJHYLrc">
+    </iframe>
+    </div>
+    <div class="col-md-3 col-sm-3 mt-5">
+    <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/2QMUyPpELxM">
+    </iframe>
     </div>
   </div>
+</div>
 
-  <div class="container text-center">
-        <div class="row">
-        <div class="col-lg-2 col-sm-2 text-center"></div>
 
-      <div class="col-lg-8 col-sm-8 text-center">
-     <img src="img/articale12.png" class="w-100 h-100">
-      </div>
-      <div class="col-lg-2 col-sm-2 text-center"></div>
+<div class="container-fluid mt-5 mb-5">
+  <div class="row">
+    <div class="col-md-3 col-sm-3 mt-5">
+    <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/aeQ6bQSkN8Q">
+    </iframe>
+    </div>
+    <div class="col-md-3 col-sm-3 mt-5">
+     <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/_lU6YZv9_vs">
+    </iframe>
+    </div>
+    <div class="col-md-3 col-sm-3 mt-5">
+     <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/W5LRTRbAmvQ">
+    </iframe>
+    </div>
+    <div class="col-md-3 col-sm-3 mt-5">
+    <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/38HNLB6QHgQ">
+    </iframe>
     </div>
   </div>
-  
-<div class="container text-center">
-        <div class="row">
-        <div class="col-lg-2 col-sm-2 text-center"></div>
+</div> 
 
-      <div class="col-lg-8 col-sm-8 text-center">
-      <p style="font-size:20px;text-align: justify; ">Women empowerment is not just a term to endorse in front of a crowd but an institution that is responsible for shaping and nurturing their lives. It’s a battle for  all  women living in this world to be accepted as an equal being. In fact,we can find thousands of examples of women that showcase their ability to perform tasks better than other human beings existing in this world. Those women disclosed a gateway of opportunities for other women while igniting confidence in the hearts of many who are now gearing up to stand on their feet as women.<br><br>Women empowerment is the action of enabling women to have access to their life on their own. Women should be that much more powerful to say “No” for things that are inappropriate in any terms. They must have freedom to access and control their life in terms of everything. However, a small piece of our society has problems giving them equal rights as compared to men. </p>
-      </div>
-      <div class="col-lg-2 col-sm-2 text-center"></div>
+
+
+<div class="container-fluid mt-5">
+  <div class="row text-center">
+    <div class="col-lg-3 col-sm-3 mt-5">
+    <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/38HNLB6QHgQ">
+    </iframe>
     </div>
+    <div class="col-lg-3 col-sm-3 mt-5">
+      <iframe class="w-100 h-100" 
+       src="https://youtube.com/embed/38HNLB6QHgQ">
+    </iframe>
+    </div> 
   </div>
-
-<div class="container text-center">
-        <div class="row">
-        <div class="col-lg-2 col-sm-2 text-center"></div>
-
-      <div class="col-lg-8 col-sm-8 text-center">
-     <img src="img/articale3.png" class="w-100 h-100">
-      </div>
-      <div class="col-lg-2 col-sm-2 text-center"></div>
-    </div>
-  </div>
-
-
-<div class="container text-center">
-        <div class="row">
-        <div class="col-lg-2 col-sm-2 text-center"></div>
-
-      <div class="col-lg-8 col-sm-8 text-center">
-      <p style="font-size:20px;text-align: justify;"> 
-Every women must be facilitated by equal opportunities, same respect, similar rights and freedoms. Empowering them to make their own decision is not enough, but making them independent in all aspects including thoughts, rights, social or family limitations will be the milestone to create a meaningful life for them.<br><br>
+</div>
  
-When it comes to women empowerment, One more question arises as 'Do women are happy with their rights to their fullest?’ Celebrating International Women's Day and Mother’s Day is truly often great. However, to bring awareness in our society, we all need to struggle for their rights and freedom also keeping in mind their safety and privacy.<br><br>
- 
-The fearful thoughts of the criminal behaviour that happened with the females in the past make them afraid of this society. They feel unsafe because of increasing crime incidents in society as well as the government. As a result, Some womens are losing their confidence to stay forward and lead.<br><br>
- 
-The exact steps to proceed further to make a revolution in women empowerment is to make them well literate and leave them free like birds so that they can achieve whatever they want with their own decisions. Plus, there must be some more context of safety and security for all womens. Furthermore, it's the responsibility of each and every human being to respect each other's rights and freedom as it will play a very crucial role in the evolution of the world.
-</p>
-      </div>
-      <div class="col-lg-2 col-sm-2 text-center"></div>
-    </div>
-  </div>
-</section>
-
-
 
 
 
@@ -217,6 +370,24 @@ The exact steps to proceed further to make a revolution in women empowerment is 
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script type="text/javascript">
+      let items = document.querySelectorAll('.carousel .carousel-item')
+
+items.forEach((el) => {
+    const minPerSlide = 4
+    let next = el.nextElementSibling
+    for (var i=1; i<minPerSlide; i++) {
+        if (!next) {
+            // wrap carousel by using first child
+            next = items[0]
+        }
+        let cloneChild = next.cloneNode(true)
+        el.appendChild(cloneChild.children[0])
+        next = next.nextElementSibling
+    }
+})
+
+  </script>
 
 </body>
 

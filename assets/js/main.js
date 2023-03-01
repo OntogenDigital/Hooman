@@ -247,3 +247,15 @@
 
 
 window.addEventListener('scroll', stickynavbar);
+
+
+// for insta reel
+// var vid = document.getElementById("myVideo"); 
+
+// function playVid() { 
+//   vid.play(); 
+// } 
+
+// function pauseVid() { 
+//   vid.pause(); 
+// } 
